@@ -1,0 +1,5 @@
+h=int(input("¿Cuantas horas trabaja?\n"))
+p=int(input("¿Cuanto cobra por hora?\n"))
+print(f"Horas de trabajo: {h}")
+print(f"coste por hora: {p}")
+print(f"Importe total: {h*p}")

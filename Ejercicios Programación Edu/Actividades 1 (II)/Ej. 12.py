@@ -1,0 +1,6 @@
+print("Introduce tus datos para calcular tu IMC")
+p=float(input("Introduce tu peso (Kg):\t"))
+e=float(input("Introduce tu estatura (m):\t"))
+imc=(p/(e**2))
+rimc=round(imc, 2)
+print(f"Su Índice de Masa Corporal es:{rimc} ")

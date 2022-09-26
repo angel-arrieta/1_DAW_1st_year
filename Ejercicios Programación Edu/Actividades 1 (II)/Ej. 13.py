@@ -1,0 +1,5 @@
+print("Escribe dos numeros enteros a Dividir")
+ddo=int(input("Introduce el dividendo:\t"))
+dsor=int(input("Introduce el divisor:\t"))
+print(f"La división de {ddo} entre {dsor} da")
+print(f"un cociente {ddo//dsor} y un resto {ddo%dsor}")
