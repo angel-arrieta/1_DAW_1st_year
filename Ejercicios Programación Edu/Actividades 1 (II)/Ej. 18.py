@@ -1,0 +1,7 @@
+frase=str(input("¿Cual es tu nombre completo?\n"))
+fra = frase.lower()
+FRA = frase.upper()
+Fra = frase.title()
+print(f"{fra}")
+print(f"{FRA}")
+print(f"{Fra}")
