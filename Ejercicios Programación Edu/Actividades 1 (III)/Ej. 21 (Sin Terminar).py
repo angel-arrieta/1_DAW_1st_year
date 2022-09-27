@@ -1,4 +1,3 @@
 fra=str(input("Introduce una frase a invertir\n"))
-Fra=fra[:]
-arf=fra.reverse()
+arf=fra[::-1]
 print(arf)
