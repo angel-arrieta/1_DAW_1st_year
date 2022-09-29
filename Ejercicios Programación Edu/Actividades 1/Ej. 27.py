@@ -1,0 +1,5 @@
+pro = input("Producto a comprar\n")
+pre = float(input("Precio del producto\t"))
+can = int(input("Cantidad del producto\t"))
+print(f"{pro} vale {pre:09.2f}")
+print(f"{can:03d} {pro} vale {pre*can:011.2f}")
