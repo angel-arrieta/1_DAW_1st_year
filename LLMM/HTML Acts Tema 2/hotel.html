@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    RESERVAS HOTEL ARRIETA
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nombre:
+                </td>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Apellidos:
+                </td>
+                <td>
+                    <input type="text" name="surname" id="surname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Telefono:
+                </td>
+                <td>
+                    <input type="tel" name="phone" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    E-mail:
+                </td>
+                <td>
+                    <input type="email" name="mail" id="mail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tipo de habitación
+                </td>
+                <td>
+                    <label for="simple">Simple: </label>
+                    <input type="radio" name="room" id="simple"><br>
+                    <label for="double">Doble: </label>
+                    <input type="radio" name="room" id="double"><br>
+                    <label for="marriage">Matrimonio: </label>
+                    <input type="radio" name="room" id="marriage">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comidas
+                </td>
+                <td>
+                    <label for="simple">Desayuno </label>
+                    <input type="checkbox" id="breakfast" value="desayuno"><br>
+                    <label for="double">Almuerzo </label>
+                    <input type="checkbox" ide="lunch" value="almuerzo"><br>
+                    <label for="marriage">Cena </label>
+                    <input type="checkbox" id="dinner" value="cena">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nº de noches:
+                </td>
+                <td>
+                    <input type="number" name="nigth" id="nigth" min="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Fecha de entrada:
+                </td>
+                <td>
+                    <label>
+                        <input type="date" name="fecha" />
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="comentary">Comentario</label>
+                </td>
+                <td>
+                    <textarea name="ccomentario" id="comentary" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Enviar</button>
+                </td>
+                <td>
+                    <input type="reset" value="Limpiar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
