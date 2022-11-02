@@ -1,0 +1,5 @@
+print("Introduzca un string para pasarlo a lista")
+cad = input(">")
+cad = list(cad)
+rev = list(reversed(cad))
+print(*rev, sep=" ")
