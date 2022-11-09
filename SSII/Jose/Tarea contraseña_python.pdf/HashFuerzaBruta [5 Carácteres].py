@@ -1,6 +1,6 @@
 import hashlib
 import time
-inicio = round(time.time(), 3)
+inicio = time.time()
 conthashed = "80b164a062d120cf8544b4f8efbdcd4d2b0f1e89a5238a5a24f7b93918230378"
 incognitas = list('ñlkjhgfdsapoiuytrewqmnbvcxzQWERTYUIOPASDFGHJKLÑZXCVBNM1234567890+-*')
 Force = ['', '', '', '', '']
@@ -12,8 +12,8 @@ comp = hashmash.hexdigest()
 print(f"[{force}]")
 
 if comp == conthashed:
-    fin1 = round(time.time(),3)
-    print(f"La contraseña es {force} y ha tardado {fin1-inicio} segundos en ejecutarse")
+    fin1 = time.time()
+    print(f"La contraseña es {force} y ha tardado {round(fin1-inicio,3)} segundos en ejecutarse")
     exit()
 
 while True:
@@ -34,11 +34,11 @@ while True:
                         comp = hashmash.hexdigest()
                         print(f"[{force}]")
                         if comp == conthashed:
-                            fin2 = round(time.time(),3)
-                            print(f"La contraseña es {force} y ha tardado {fin2-inicio}segundos en ejecutarse")
+                            fin2 = time.time()
+                            print(f"La contraseña es {force} y ha tardado {round(fin2-inicio,3)}segundos en ejecutarse")
                             exit()
                         else:
                             continue
-    fin3 = round(time.time(),3)
-    print(f"Contraseña no encontrada, {fin3-inicio} segundos malgastados")
+    fin3 = time.time()
+    print(f"Contraseña no encontrada, {round(fin3-inicio,3)} segundos malgastados")
     exit()
