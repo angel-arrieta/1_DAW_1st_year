@@ -2,7 +2,7 @@ import hashlib
 import time
 inicio = round(time.time(), 3)
 conthashed = "80b164a062d120cf8544b4f8efbdcd4d2b0f1e89a5238a5a24f7b93918230378"
-incognitas = list('ñlkjhgfdsapoiuytrewqmnbvcxzQWERTYUIOPASDFGHJKLZXCVBNM1234567890+-*')
+incognitas = list('ñlkjhgfdsapoiuytrewqmnbvcxzQWERTYUIOPASDFGHJKLÑZXCVBNM1234567890+-*')
 Force = ['', '', '', '', '']
 
 force = "".join(Force)
