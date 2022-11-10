@@ -20,16 +20,15 @@ def searcher():
             trycript = matchhit.hexdigest()
 
             if trycript == crypted:
-                fin1 = time.time()
-                print(f"La contraseña es {match} y ha tardado {round(fin1 - inicio, 3)} segundos en ejecutarse")
+                print(f"La contraseña es {match}")
                 exit()
 
             else:
                 continue
 
-    fin3 = time.time()
-    print(f"Contraseña no encontrada, {round(fin3-inicio,3)} segundos malgastados")
 
+fin = time.time()
+print(f"Ha tardado {round(fin - inicio, 3)} segundos en encontrarse")
 
 lista = [threading.Thread(target=searcher) for _ in range(3)]
 for i in lista:
