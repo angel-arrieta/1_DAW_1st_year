@@ -1,0 +1,41 @@
+* {
+    font-family: "Courier New", Courier, monospace;
+  }
+   
+  #main {
+    background-color: grey;
+  }
+   
+  h1.especial {
+    color: blue;
+  }
+   
+  h2,
+  h3 {
+    border: 1px solid orange;
+  }
+   
+  li {
+    color: red;
+  }
+   
+  li li { /*Se aplica a los li dentro de li (sublista)*/
+   
+    color: green;
+  }
+   
+  p > img { /*para las img  hijas directas de párrafo*/
+    border: 5px solid black;
+  }
+   
+  img [alt="segunda"] { /*Por valor del atributo alt*/
+    border: 5px solid red;
+  }
+  p ~ h3.antes { /*Se aplica a los h3 antes del párrafo*/
+    background-color: pink;
+  }
+  p + h3 { /*Se aplica a los h3 justo después del párrafo*/
+   
+    background-color: blue;
+  }
+  
