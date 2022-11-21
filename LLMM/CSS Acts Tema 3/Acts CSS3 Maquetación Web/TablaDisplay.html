@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Tabla con Display </title>
+    <style>
+        h1{
+            color: orange;
+        }
+        h2{
+            color: brown;
+            display: table-caption;
+        }
+        body{
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            margin: 10px;
+        }
+        .tablagen{
+            display: table;
+            border: 3px solid;
+            text-align: center;
+            font-size: 20px;
+            z-index: 1;
+            padding: 12px;
+            margin: 10px;
+            left: 13%;
+            position: relative;
+        }
+        .fila{
+            display: table-row;
+            padding: 12px;
+            margin: 10px;
+        }
+        .col{
+            display: table-cell;
+            background-color: cyan;
+            border: 3px solid;
+            padding: 12px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display: Table</h1>
+    <h2>Mira_que_tabla_más_bonita</h2>
+    <div class="tablagen">
+        <div class="fila">
+          <div class="col">A</div>
+          <div class="col">B</div>
+          <div class="col">C</div>
+          <div class="col">D</div>
+          <div class="col">E</div>
+        </div>
+        <div class="fila">
+          <div class="col">F</div>
+          <div class="col">G</div>
+          <div class="col">H</div>
+          <div class="col">I</div>
+          <div class="col">J</div>
+        </div>
+        <div class="fila">
+          <div class="col">K</div>
+          <div class="col">L</div>
+          <div class="col">M</div>
+          <div class="col">N</div>
+          <div class="col">Ñ</div>
+        </div>
+    </div>
+</body>
+</html>
