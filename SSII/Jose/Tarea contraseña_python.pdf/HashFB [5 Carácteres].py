@@ -23,19 +23,13 @@ def searcher():
                         hashmash = hashlib.sha256(forcebin)
                         comp = hashmash.hexdigest()
                         if comp == conthashed:
-                            succes = f"La contraseña es {force}"
-                            return print(succes)
+                            return force
                         else:
                             continue
 
 
 if __name__ == "__main__":
     inicio = time.time()
-    Hilo1 = threading.Thread(target=searcher())
-    Hilo2 = threading.Thread(target=searcher())
-    Hilo3 = threading.Thread(target=searcher())
-    Hilo1.start()
-    Hilo2.start()
-    Hilo3.start()
+    print(f"La contraseña es {searcher()}")
     fin = time.time()
     print(f"Ha tardado {round(fin - inicio, 3)} segundos")
