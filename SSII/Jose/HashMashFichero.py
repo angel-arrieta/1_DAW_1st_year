@@ -1,5 +1,6 @@
 import time
 import hashlib
+import threading
 
 
 def searcher():
@@ -15,11 +16,12 @@ def searcher():
                 continue
             if trycript == crypted:
                 arch.close()
-                return match
+                return print(match)
 
 
 if __name__ == "__main__":
     inicio = time.time()
-    print(f"La contraseña es {searcher()}")
+    Hilo1 = threading.Thread(target=searcher())
+    Hilo1.start()
     fin = time.time()
     print(f"ha tardado {round(fin - inicio, 3)} segundos en encontrarse")

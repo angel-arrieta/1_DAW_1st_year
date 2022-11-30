@@ -1,5 +1,4 @@
 import time
-import threading
 inicio = time.time()
 incognitas = list('qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM1234567890+-*')
 Force = ['', '', '', '', '', '', '', '']
@@ -23,16 +22,14 @@ def searcher():
                                 for let in incognitas:
                                     Force[7] = let
                                     force = "".join(Force)
-                                    print(f"[{force}]")
+                                    return force
 
 
-Hilo1 = threading.Thread(target=searcher)
-Hilo2 = threading.Thread(target=searcher)
-Hilo3 = threading.Thread(target=searcher)
-Hilo1.start()
-Hilo2.start()
-Hilo3.start()
-
-
-fin = time.time()
-print(f"Ha tardado {round(fin-inicio, 3)} segundos en sacar todas las contraseñas")
+if __name__ == "__main__":
+    inicio = time.time()
+    con = ""
+    while con != "********":
+        con = searcher()
+        print(con)
+    fin = time.time()
+    print(f"Ha tardado {round(fin - inicio, 3)} segundos")
