@@ -40,12 +40,15 @@ def validator(value):
 
 
 def reserved(value):
-    value = int(value)
-    if value == 0 or 255:
-        reservada = "La IP es reservada [broadcast]"
+    if int(value) == 0:
+        reservada = "La IP es reservada"
         return reservada
+    elif int(value) == 255:
+        broadcast = "La IP es reservada [broadcast]"
+        return broadcast
     else:
-        return
+        no = "La IP no es reservada"
+        return no
 
 
 def d_check(value):
@@ -56,10 +59,11 @@ def d_check(value):
 
 
 if __name__ == "__main__":
+    print("Introduce una IP")
     IP = input(">")
     octeto = IP.split(".", 3)
     validator(IP)
-    print(reserved(octeto[3]))
+    print(reserved(int(octeto[3])))
     if d_check(octeto[0]) is True:
         print("IP tipo D [pública]")
     else:
