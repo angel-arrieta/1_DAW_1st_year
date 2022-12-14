@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title> Flexbox Web </title>
+    <style>
+        h1{ color: blue; 
+            text-align: center;
+        }
+        .sub{   text-align: center;
+                border-bottom: 2px solid black;
+                padding-bottom: 9px;
+        }
+        .bod{   display: flex; flex-direction: row;
+        }
+        .latmen{ color: blue; width: 70px;
+                 display: flex; flex-direction: column;
+                 margin-left: 15px; margin-right: 15px;
+        }
+        .latmen > div{ text-align: center; padding: 9px;
+        }
+        .center, .center > * { border: solid 2px; padding: 5px;}
+        .center{   display: flex; flex-direction: column;
+                   justify-content: space-around; width: fit-content;
+        }
+        .center > *{   display: flex; flex-direction: row;
+                       justify-content: space-around;
+        }
+        .cup, .cdown, .container{   justify-content: space-around;
+        }
+        .planet { width: 200px; border-radius: 9px; }
+        .container{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planetas: Maquetación Flex</h1>
+    <div class="sub">para diseño web</div>
+    <div class="bod">
+        <div class="latmen">
+            <div> Inicio </div> <div> Galería </div>
+            <div> Mapas </div> <div> Sobre<br>Nosotros </div>
+            <div> Contacto </div>
+        </div>
+        <div class="center">
+            <div class="cup">
+                <div class="container"> <img class="planet" src="img/tierra.jpg" alt="tierra"> </div>
+                <div class="container"> <img class="planet" src="img/marte.jpg" alt="marte"> </div>
+            </div>
+            <div class="cdown">
+                <div class="container"> <img class="planet" src="img/saturno.jpg" alt="saturno"> </div>
+                <div class="container"> <img class="planet" src="img/jupiter.png" alt="jupiter"> </div>
+                <div class="container"> <img class="planet" src="img/exoplaneta.jpg" alt="exoplaneta"> </div>
+            </div>
+
+        </div>
+    </div>
+</body>

@@ -1,3 +1,6 @@
+import socket
+
+
 def ip_checker(value):
     octetos = value.split(".", 3)
     octetos[0] = int(octetos[0])
@@ -59,9 +62,21 @@ def d_check(value):
         return False
 
 
+def connect(dire, puerto):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        try:
+            sock.connect((dire, puerto))
+        except OSError:
+            return "Dirección desconectada de internet"
+        else:
+            sock.close()
+            return "Dirección conectada a internet"
+
+
 if __name__ == "__main__":
-    print("Introduce una IP válida")
+    print("Introduce una IP a comprobar")
     IP = input(">")
+    port = int(input("Puerto a usar >\t"))
     octeto = IP.split(".", 3)
     validator(IP)
     print(reserved(octeto[3]))
@@ -69,3 +84,7 @@ if __name__ == "__main__":
         print("IP tipo D [pública]")
     else:
         print(ip_checker(IP))
+    if port < 0:
+        print("Puerto inutilizable")
+        exit()
+    print(connect(IP, port))
