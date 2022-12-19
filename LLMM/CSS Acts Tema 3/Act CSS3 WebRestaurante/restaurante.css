@@ -1,0 +1,53 @@
+body{ 
+  background-color: lightgreen;
+  padding: 5px;
+}
+h1{
+   color: darkorchid ; text-align: center;
+   font-size: 50px;
+}
+.up{
+  display: flex; flex-direction: row; justify-content: center;
+}
+.txt{
+  display: flex; flex-direction: row;
+}
+.space{
+  color: lightgreen;
+}
+.vid, .me{
+  border: 8px groove indigo;
+}
+.vid, .me, .boutme{
+  padding: 4px;
+}
+.mtitle{
+  text-align: center; font-size: 40px;
+  color: darkgoldenrod; font-weight: bold;
+  margin: 10px;
+}
+.menu{
+  display:flex; flex-direction: row; justify-content: space-evenly;
+}
+.column{
+  display:flex; flex-direction: column; font-size: 25px;
+}
+.blockmenu{
+  text-align: center;font-weight: bold;
+  padding: 4px; color: indigo;
+}
+.food{
+ height: 100px;
+}
+.i{
+  display: none;
+}
+.t:hover{
+  color:brown;
+}
+.t:hover ~ .i{
+  display: contents;
+}
+.ctit{
+font-size: 30px;
+}
