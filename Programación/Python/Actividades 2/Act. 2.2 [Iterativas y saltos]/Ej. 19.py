@@ -1,58 +1,31 @@
-def acumulador(valor):
-    valor += 1
-    return valor
-
-
-def impresion(element):
-    text = element
-    return text
-
-
-def imprimir(text, times):
-    press = []
-    while times != 0:
-        press.append(text)
-        times -= 1
-    imprime = "\n".join(press)
-    return imprime
-
-
 if __name__ == "__main__":
-    veces = 0
-    texto = "vacio, añade un listado"
     while True:
-        veces = veces
-        texto = texto
-        while True:
-            try:
-
-                print(f"""
-                        Impresor listado
-                        1-Aumentar impresiones
-                        2-Cambiar listado
-                        3-Imprimir ({veces}veces)
-                        0-finalizar
-                        """)
-                ini = int(input(">"))
-
-                if ini == 1:
-                    veces = acumulador(veces)
-                    break
-                if ini == 2:
-                    put = input("Introduce el listado:\n")
-                    texto = impresion(put)
-                    break
-                if ini == 3:
-                    print(imprimir(texto, veces))
-                    veces = 0
-                    break
-                if ini == 0:
-                    print("Hasta la próxima ;)")
-                    exit()
-                else:
-                    print("Opción no recogida, elija otra")
-                    continue
-
-            except ValueError:
-                print("Opción inexistente, elija otra")
-                continue
+        try:
+            print("""
+            1- comenzar programa
+            2- imprimir listado
+            3-finalizar programa
+            """)
+            opcion = int(input(">\t"))
+            if opcion == int(1):
+                print("""
+                COMENZAR Programa-dolor sit amet, consectetur adipiscing elit.
+                Maecenas justo mi, accumsan eu lorem at, ultricies rutrum
+                massa. Mauris ac magna vel lorem ultrices tincidunt.
+                Nullam vel sem orci. Nullam finibus ex orci. Nullam vitae
+                odio sodales, ultricies risus at, imperdiet quam.
+                """)
+            if opcion == int(2):
+                print("""
+                IMPRIMIR Listado-dolor sit amet, consectetur adipiscing elit.
+                Maecenas justo mi, accumsan eu lorem at, ultricies rutrum
+                massa. Mauris ac magna vel lorem ultrices tincidunt.
+                Nullam vel sem orci. Nullam finibus ex orci. Nullam vitae
+                odio sodales, ultricies risus at, imperdiet quam.
+                """)
+            if opcion == int(3):
+                break
+            if opcion < 1 or opcion > 3:
+                print("Opción incorrecta, vuelva a intentar")
+        except ValueError:
+            print("Opción incorrecta, vuelva a intentar")
