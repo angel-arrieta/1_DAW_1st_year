@@ -13,8 +13,8 @@
 <body>
     <div class="all">
         <h1> ¿Es mayúscula o minúscula? </h1>
-        <input type="text" name="cadena" id="mayuminu" >
-        <button onclick="leer()">Comprobar</button>
+        <input type="text" name="cadena" id="mayuminu" onblur="leer(this)">
+        
         <div id="show"></div>
     </div>
 </body>
