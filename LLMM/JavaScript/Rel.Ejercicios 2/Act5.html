@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Mean
+    </title>
+    <script type="text/javascript" src="Scripts/act5.js"></script>
+    <style>
+        .all {display: flex;
+            flex-direction: column;
+            align-items: center; }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1> MEDIA DE NOTAS </h1>
+        <div> Primera Nota</div>
+        <input type="number" name="primera" id="nota1">
+        <div> Segunda Nota</div>
+        <input type="number" name="segunda" id="nota2">
+        <div> Tercera Nota</div>
+        <input type="number" name="tercera" id="nota3">
+        <button type="button" onclick="media(nota1, nota2, nota3)">Calcular</button>
+        <div id="mostrar"></div>
+    </div>
+</body>
