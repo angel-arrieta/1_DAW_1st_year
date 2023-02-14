@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title>
-        Piramid
+        Custom Piramid
     </title>
-    <script type="text/javascript" src="Scripts/act4.js"></script>
+    <script type="text/javascript" src="Scripts/act6y8.js"></script>
     <style>
         .all {display: flex;
             flex-direction: column;
@@ -15,7 +15,11 @@
 </head>
 <body>
     <div class="all">
-        <button type="button" onclick="escalera()"> <h1>PIRAMIDE</h1> </button>
+        <h1>CREA TU PIRAMIDE 2</h1>
+        <div>Relleno</div>
+        <input type="text" name="relleno" id="filler">
+        <div>Altitud</div>
+        <input type="number" min="1" name="longitud" id="length" onchange="escalera(this, filler)">
         <div id="mostrar"></div>
     </div>
 </body>

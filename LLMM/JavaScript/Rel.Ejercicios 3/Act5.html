@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title>
-        Piramid
+        Piramid length
     </title>
-    <script type="text/javascript" src="Scripts/act4.js"></script>
+    <script type="text/javascript" src="Scripts/act5.js"></script>
     <style>
         .all {display: flex;
             flex-direction: column;
@@ -15,7 +15,8 @@
 </head>
 <body>
     <div class="all">
-        <button type="button" onclick="escalera()"> <h1>PIRAMIDE</h1> </button>
+        <h1>CREA TU PIRAMIDE</h1>
+        <input type="number" min="1" name="longitud" id="length" onchange="escalera(this)">
         <div id="mostrar"></div>
     </div>
 </body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Rectangle
+    </title>
+    <script type="text/javascript" src="Scripts/act9.js"></script>
+    <style>
+        .all {display: flex;
+            flex-direction: column;
+            align-items: center;}
+        #mostrar {text-align: center;
+                font-weight: bold;
+                font-size: 22px;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1>CREA TU RECTÁNGULO</h1>
+        <div>Ancho</div>
+        <input type="number" min="1" name="ancho" id="width">
+        <div>Alto</div>
+        <input type="number" min="1" name="alto" id="height">
+        <button type="button" onclick="rectangle(width, height)"> Generar </button>
+        <div id="mostrar"></div>
+    </div>
+</body>

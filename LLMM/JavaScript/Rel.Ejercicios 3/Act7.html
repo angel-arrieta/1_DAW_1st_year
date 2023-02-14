@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title>
-        Piramid
+        Line Print
     </title>
-    <script type="text/javascript" src="Scripts/act4.js"></script>
+    <script type="text/javascript" src="Scripts/act7.js"></script>
     <style>
         .all {display: flex;
             flex-direction: column;
@@ -15,7 +15,11 @@
 </head>
 <body>
     <div class="all">
-        <button type="button" onclick="escalera()"> <h1>PIRAMIDE</h1> </button>
+        <h1>IMPRIME LA LINEA</h1>
+        <div>Carácter</div>
+        <input type="text" name="relleno" id="line">
+        <div>Veces</div>
+        <input type="number" min="1" name="longitud" id="length" onchange="imprimir(this, line)">
         <div id="mostrar"></div>
     </div>
 </body>

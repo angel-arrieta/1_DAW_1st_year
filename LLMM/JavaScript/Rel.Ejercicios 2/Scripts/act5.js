@@ -5,30 +5,22 @@ function media(nota1, nota2, nota3){
     let div = document.getElementById("mostrar")
     const notas = [nota1, nota2, nota3]
     const literal = ["primera", "segunda", "tercera"]
-    var recuperar = []
-    var suma = Number(0)
+    var media = ((nota1 + nota2 + nota3) / 3)
     var y = Number(0)
-    for (var x in notas){
-        if (Number(x) < 5) {
-            recuperar.concat(literal[y])
-        }
-        console.log(suma)
-        suma += x
-        console.log(x)
-        y += Number(1)
-        console.log(suma)
-        console.log(y)
-    }
-    console.log(suma)
-    console.log(recuperar)
-    if (recuperar == []){
-        var resultado = "Su nota media es " + (suma/3)
-    } else {
-        var resultado = "Debe de recuperar la(s) evaluación(es): <br>"
-        for (var lit in recuperar){
-            resultado.concat("- ", lit, "<br>")
+    var recuperar = []
+    var resultado = ""
+    for (x in notas){
+        if (notas[x] < 5) {
+            recuperar.push(literal[x])
         }
     }
-    console.log(resultado)
+    if (recuperar.length > 0){
+        var resultado = ""
+        for (lit in recuperar){
+            var resultado = resultado.concat("Debe recuperar la ", recuperar[lit], " evaluación. <br> ")
+        }
+    }else{
+        var resultado = "Tienes una nota media de " + media
+    }
     div.innerHTML = resultado
 }
