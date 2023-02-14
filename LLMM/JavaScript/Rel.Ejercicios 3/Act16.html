@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <head>
     <title>
-        OddEven1
+        Factorize
     </title>
-    <script type="text/javascript" src="Scripts/act11.js"></script>
+    <script type="text/javascript" src="Scripts/act16.js"></script>
     <style>
         .all {display: flex;
             flex-direction: column;
             align-items: center;}
         #mostrar {text-align: center;
-                font-weight: bold;
                 font-size: 25px;}
     </style>
 </head>
 <body>
     <div class="all">
-        <h1>Paridad binaria</h1>
-        <input type="number" name="numero" id="number" onchange="paridad(this)">
-        <div>Output: 1 - par / 0 - impar</div>
+        <h1>Factorizar</h1>
+        <input type="number" min="1" name="base" id="base" onchange="factorizado(this)">
         <div id="mostrar"></div>
     </div>
 </body>

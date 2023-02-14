@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Power
+    </title>
+    <script type="text/javascript" src="Scripts/act15.js"></script>
+    <style>
+        .all {display: flex;
+            flex-direction: column;
+            align-items: center;}
+        #mostrar {text-align: center;
+                font-size: 25px;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1>Potencias</h1>
+        <div>Base</div>
+        <input type="number" min="1" name="base" id="base">
+        <div>Exponente</div>
+        <input type="number" min="1" name="exponente" id="power">
+        <div>_____________________</div>
+        <div>---------------------</div>
+        <button type="button" onclick="potenciado(base, power)"> Expón / Potencia </button>
+        <div id="mostrar"></div>
+    </div>
+</body>

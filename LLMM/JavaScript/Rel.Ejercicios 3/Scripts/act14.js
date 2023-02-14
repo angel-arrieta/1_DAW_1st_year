@@ -8,17 +8,12 @@ function prime_range (input){
         var number = Number(numarray[n])
         var lilength = number - 2
         var lista = Array.from({length: lilength}, (_, i) => i + 2)
-        // console.log(lista)
         var response =""
         for(dig in lista){
-            // console.log(dig)
-            // console.log(lista[dig])
             if (number % lista[dig] == 0){
-                // console.log(number % lista[dig])
                 var response = number + " no es un número primo"
                 break
         } }
-        // console.log(respuesta)
         if (response.match("primo") == null){
             var response = number + " es un número primo" }
         var respuesta = respuesta.concat(response, "<br>")
