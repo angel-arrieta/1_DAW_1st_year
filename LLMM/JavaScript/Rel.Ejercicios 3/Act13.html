@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Primes
+    </title>
+    <script type="text/javascript" src="Scripts/act13.js"></script>
+    <style>
+        .all {display: flex;
+            flex-direction: column;
+            align-items: center;}
+        #mostrar {text-align: center;
+                font-weight: bold;
+                font-size: 25px;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1>Es o no primo</h1>
+        <input type="number" min="1" name="numero" id="number" onchange="prime(this)">
+        <div id="mostrar"></div>
+    </div>
+</body>
