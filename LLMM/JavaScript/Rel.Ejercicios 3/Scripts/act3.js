@@ -1,5 +1,6 @@
 function leer(input){
     var derecho = input.value
+    var derecho = derecho.toLowerCase()
     var derecho = derecho.replaceAll(",","")
     var derecho = derecho.replaceAll(" ","")
     console.log(derecho)
