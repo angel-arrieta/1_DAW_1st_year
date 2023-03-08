@@ -1,0 +1,180 @@
+body {
+    background-image: url("Imagenes/fondo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#denuevo{
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+    padding: 20px;
+    display: inline;
+}
+.centro {
+    margin: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: center;
+}
+.jefe {
+    margin: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: center;
+}
+#enemigo{
+    border: none;
+    box-shadow: none;
+}
+.ganancias {
+    margin: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: center;
+}
+.imagenes {
+    background-color: rgba(161, 0, 0, 0.25);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.ataque {
+    color: white;
+    text-align: center;
+    background-color: rgba(161, 0, 0, 0.25);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    min-width:200px ;
+    min-height: 40px ;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.datos{
+    color: white;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    margin: 8px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px #66CCFF;
+}
+.botones {
+    color: white;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.boton {
+    background-color: rgba(0, 150, 200, 0.50);
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'The Girl Next Door', cursive;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100px;
+    box-shadow: 2px 2px 5px #999;
+}
+#recibir{
+    background-color: rgba(0, 150, 200, 0.50);
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'The Girl Next Door', cursive;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+    box-shadow: 2px 2px 5px #999;
+}
+.boton:hover {
+    box-shadow: 2px 2px 5px #333;    
+}
+#recibir:hover {
+    box-shadow: 2px 2px 5px #333;    
+}
+.bosshealth, .stats{
+    font-size: 30px;
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.bosshealth{
+    background-color: rgba(9, 124, 111, 0.5) ;
+    color: #71eaee;
+}
+.stats{
+    background-color: rgba(177, 0, 0, 0.5);
+    color: #b88e11;
+}
+#followup{
+    font-size: 27px;
+    color: rgb(255, 98, 98);
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(26, 163, 13, 0.50);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, .sub{
+    text-align: center;
+    background-color: rgba(115, 213, 29, 0.5);
+    display: inline-block;
+    border-radius: 10px;
+}
+h1, h2 {
+    border: 15px groove rgb(131, 69, 3);
+}
+h1{
+    color: #dcb639;
+    padding: 15px;
+}
+h2 {
+    color: #71eaee;
+    font-size: 30px;
+}
+h2, .sub{
+    padding: 10px;
+}
+
+.sub{
+    color: #dcb639;
+    border: 5px solid rgb(131, 69, 3);
+    font-size: 20px;
+}

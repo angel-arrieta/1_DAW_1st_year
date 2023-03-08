@@ -1,0 +1,54 @@
+<!doctype html5>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Celestial Jackpot</title>
+    <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+    <link href='Miruleta.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="Miruleta.js"></script>
+</head>
+<body onload="cambiaSombras();">
+    <div class="header">
+        <h1>TERRA RULETA</h1>
+        <h2>¡Detén al Moon Lord!</h2>
+        <div class="sub">Por cada ronda, recibes 20 de daño, derrota al Moon Lord antes de que se agote tu vida</div>
+    </div>
+    <div class="all">
+        
+        <div class="ganancias">
+            <img id="premios" src="Imagenes/Score.png">
+            <div class="sub">*Para sacar escalera no es necesario que este <br>en orden, solo has de sacar uno de cada*</div>
+            <div class="boton" id="denuevo" onclick="location.reload();">Reiniciar</div>
+        </div>
+
+        <div class="centro">
+            <div class="imagenes">
+                <img id="imag3" src="Imagenes/stardust.png">
+                <img id="imag2" src="Imagenes/vortice.png">
+                <img id="imag1" src="Imagenes/nebulosa.png">
+                <img id="imag0" src="Imagenes/solar.png">
+            </div>
+            <div class="botones">
+                <div class="boton" id="iniciar" onclick="ruleta()">*Iniciar*</div>
+                <div class="boton" id="parar" onclick="paraRuleta()">Parar</div>
+                <div class="boton" id="parar2" onclick="paraRuleta2()">Parar 2</div>
+                <div class="boton" id="parartodo" onclick="pararTodo()">Parar Todo</div>
+            </div>
+            <div class="stats">
+                    VIDA: <output type="text" id="mivida"></output>/500 </div>
+                <div id="followup">
+                    <div id="dano"></div>
+                </div>
+            </div>
+
+        <div class="jefe">
+            <img id="enemigo" src="Imagenes/boss.png">
+            <div class="bosshealth">
+                Moon Lord <br>
+                <output type="text" id="lord"></output>/145000 
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
