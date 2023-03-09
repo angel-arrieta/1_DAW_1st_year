@@ -6,12 +6,13 @@ var intervaloSombras;
 var posicionSombras = [[2,2], [-2,2], [-2,-2], [2,-2]];
 var posicionActualSombra = 0;
 var vida = 520;
-var moonlord = 145000;
+var moonlord = 150000;
 var sol = 0;
 var nebules = 0;
 var vortex = 0;
 var star = 0;
 var dano = 0;
+var final = 0;
 
 function DamageCalculator(){    
     marcos.forEach(solar)
@@ -82,44 +83,53 @@ function stardust(image){
     }
 }
 
+function Statechecker(){
+    if (vida <= 0){
+        return 2
+    } else if (moonlord <= 0) {
+        return 1
+    }
+}
+
 function ruleta() {
     if (corriendo <= 0) {
-        if (vida <= 0){
-            document.getElementById("publico").innerHTML = "Desacansa En Paz..."
-            document.getElementById("dano").innerHTML = NaN
-            document.getElementById("advertencia").innerHTML = "Has Muerto..."
-            document.getElementById("estadojefe").innerHTML = "El Moon Lord <br> Acabo Con Tu Vida"
-            corriendo = 0
-            vida = -5
-        } else {
             clearInterval(intervaloSombras);
             dano = DamageCalculator();
             moonlord -= dano;
             vida -= 20
-            document.getElementById("dano").innerHTML = "*Has hecho " + dano + " de daño*"
+            final = Statechecker()
 
-            for(i in marcos)
-                marcos[i] = Math.floor(Math.random() * 4);
-            
-                intervaloRuleta[0] = setInterval(function() { cambiaImagen(0);}, 150);
-                intervaloRuleta[1] = setInterval(function() { cambiaImagen(1);}, 150);
-                intervaloRuleta[2] = setInterval(function() { cambiaImagen(2);}, 150);
-                intervaloRuleta[3] = setInterval(function() { cambiaImagen(3);}, 150);
+            if (final == 2){
+                document.getElementById("dano").innerHTML = "Has Muerto"
+                moonlord += dano
+                corriendo = 0
+                vida = 0
+            } else if (final == 1) {
+                document.getElementById("dano").innerHTML = "¡Has Ganado!"
+                vida += 20
+                corriendo = 0
+                moonlord = 0
+            } else {
+                document.getElementById("dano").innerHTML = "*Has hecho " + dano + " de daño*"
+                for(i in marcos)
+                    marcos[i] = Math.floor(Math.random() * 4);
+                
+                    intervaloRuleta[0] = setInterval(function() { cambiaImagen(0);}, 150);
+                    intervaloRuleta[1] = setInterval(function() { cambiaImagen(1);}, 150);
+                    intervaloRuleta[2] = setInterval(function() { cambiaImagen(2);}, 150);
+                    intervaloRuleta[3] = setInterval(function() { cambiaImagen(3);}, 150);
 
-                console.log("daño "+dano)
-                corriendo = 4;
-                dano = 0;
-                sol = 0;
-                nebules = 0;
-                vortex = 0;
-                star = 0;
-        }
+                    console.log("daño "+dano)
+                    corriendo = 4;
+                    dano = 0;
+                    sol = 0;
+                    nebules = 0;
+                    vortex = 0;
+                    star = 0;
+            }   
     }
-    console.log("vida "+vida)
-    console.log("boss "+moonlord)
     document.getElementById("lord").innerHTML = moonlord
     document.getElementById("mivida").innerHTML = vida
-    
 }
 
 function cambiaImagen(x) {
@@ -150,21 +160,6 @@ function paraRuleta2() {
     console.log("corriendo "+corriendo)
 }
 
-function pararTodo() {
-    if (corriendo > 0) {
-        corriendo = corriendo - 1;
-        clearInterval(intervaloRuleta[corriendo]);
-        corriendo = corriendo - 1;
-        clearInterval(intervaloRuleta[corriendo]);
-        corriendo = corriendo - 1;
-        clearInterval(intervaloRuleta[corriendo]);
-        corriendo = corriendo - 1;
-        clearInterval(intervaloRuleta[corriendo]);
-        
-        if (corriendo <= 0) {cambiaSombras()} 
-    }
-    console.log("corriendo "+corriendo)
-}
             
 function cambiaSombras() {
     intervaloSombras=setInterval(circulaSombras, 100);
