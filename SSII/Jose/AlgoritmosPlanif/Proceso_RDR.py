@@ -59,8 +59,10 @@ def first(tupler):
 
 
 if __name__ == "__main__":
-    #Las ejecuciones tiene un ciclo de espera, de cuando entran
-    #Da la falsa sensación de estar divididos en quantos de 6
+    #Las ejecuciones tiene un ciclo de espera, de cuando entran.
+    #Da la falsa sensación de estar divididos en quantos de 6.
+    #También en el caso de que una ejecución termine en menos
+    #ciclos de los que el quanto marca, pasa a la siguiente.
     legible = casting(read("Process.RDR.txt"))
     readable, Quanto = lectureRDR(legible)
     ordered = orderRDR(readable, Quanto)
