@@ -1,4 +1,4 @@
-L CL CE
+L CE CLL
 A 16 10
 B 8 10
 C 2 10

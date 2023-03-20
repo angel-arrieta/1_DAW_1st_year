@@ -1,44 +1,59 @@
-def leer(fichero):
-    lista = []
-    with open(fichero) as procesos:
-        listado = procesos.readlines()
-        for ejecucion in listado:
-            stripped = ejecucion.rstrip("\n")
-            lista.append(stripped.split(" "))
-        procesos.close()
-        lista.pop(0)
-    return lista
+def read(fichero):
+    try:
+        exist = open("executed.txt")
+        exist.close()
+        import os
+        os.remove("executed.txt")
+        raise FileNotFoundError
+    except FileNotFoundError:
+        tupler = []
+        with open(fichero) as process:
+            listed = process.readlines()
+            for arrange in listed:
+                stripped = arrange.rstrip("\n")
+                tupler.append(stripped.split(" "))
+            process.close()
+            tupler.pop(0)
+        return tupler
 
 
-def casting(listado):
-    casteado = []
+def casting(listed):
+    assign = []
     import re
-    for lista in listado:
-        unir = []
-        for data in lista:
+    for tuples in listed:
+        bind = []
+        for data in tuples:
             if re.match("[0-9]", data) is None:
-                unir.append(data)
-            if re.match("[0-9]", data) is not None:
+                bind.append(data)
+            elif re.match("[0-9]", data) is not None:
                 cast = int(data)
-                unir.append(cast)
-        casteado.append(unir)
-    return casteado
+                bind.append(cast)
+        assign.append(bind)
+    return assign
 
 
-def calculador(lista):
-    listados = []
-    iniciara = 0
-    for tareas in lista:
-        metemos = []
-        proceso = tareas[0]
-        metemos.append(proceso)
-        if iniciara != 0:
-            inicio = iniciara
-        elif iniciara == 0:
-            inicio = iniciara + tareas[2]
-        metemos.append(inicio)
-        fin = inicio + tareas[1]
-        metemos.append(fin)
-        listados.append(metemos)
-        iniciara = fin + 1
-    return listados
+def calculator(tuples):
+    listed = []
+    will_begin = 0
+    for tasks in tuples:
+        put = []
+        process = tasks[0]
+        put.append(process)
+        if will_begin != 0:
+            begin = will_begin
+        elif will_begin == 0:
+            begin = will_begin + tasks[2]
+        put.append(begin)
+        end = begin + tasks[1]
+        put.append(end)
+        listed.append(put)
+        will_begin = end + 1
+    return listed
+
+
+def return_archive(calculated_matrix):
+    with open("executed.txt", "x") as new:
+        for cycle in calculated_matrix:
+            new.write(f"Proceso {cycle[0]}: entra en el ciclo {cycle[1]} y sale en el ciclo {cycle[2]}\n")
+        new.close()
+        return print("Fichero creado con el resultado (executed.txt)")

@@ -1,13 +1,12 @@
-from CommonFuncs import leer, casting, calculador
+from CommonFuncs import read, casting, calculator, return_archive
 
 
-def ordenador(lista):
-    return lista[2]
+def first(tupler):
+    return tupler[2]
 
 
 if __name__ == "__main__":
-    leibles = casting(leer("Process.FIFO.txt"))
-    ordenados = sorted(leibles, key=ordenador)
-    ejecutables = calculador(ordenados)
-    for ciclos in ejecutables:
-        print(f"Proceso {ciclos[0]}: empieza en el ciclo {ciclos[1]} y sale en el ciclo {ciclos[2]}")
+    readable = casting(read("Process.FIFO.txt"))
+    organized = sorted(readable, key=first)
+    executable = calculator(organized)
+    return_archive(executable)
