@@ -1,0 +1,41 @@
+*{
+    padding: 3px;
+    margin: 3px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    background-image: url(back.jpg);
+    background-size: 100%;
+}
+.put{
+    display: flex;
+    flex-direction: row;
+}
+#table{
+    display: grid;
+    grid-template: repeat(13, 40px)/ repeat(5, 130px);
+    gap: 5px;
+}
+#table > div{
+    padding: 4px;
+    background-color: rgb(176, 21, 194);
+    border: 3px groove rgba(203, 64, 64, 0.652);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+#numero, #boton {
+    border-radius: 5px;
+}
+h1{
+    color: rgb(104, 0, 149);
+    font-size: 50px;
+}
+.mal{
+    width: 200px;
+    height: 40px;
+    font-size: 35px;
+    color: white;
+}
