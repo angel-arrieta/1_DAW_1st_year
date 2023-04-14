@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Concat
+    </title>
+    <style>
+        .all {display: flex;
+            flex-direction: column;
+            align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <h1> Concatenación </h1>
+        <div> De la cadena ” Don Quijote” con "de La Mancha"</div>
+        <div id="mostrar"></div>
+    </div>
+    <script>
+        var nombre =" Don Quijote";
+        var apellido ="de La Mancha";
+        function met1(){
+        return nombre.concat(apellido)
+        }
+        function met2(){
+        return (nombre + " " + apellido)
+        }
+        document.getElementById("mostrar").innerHTML = (met1() + "<br>" + met2());
+    </script>
+</body>
