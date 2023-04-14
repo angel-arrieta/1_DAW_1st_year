@@ -2,7 +2,7 @@ import random
 
 
 def dame():
-    diccionario = ["oklahoma", "ontario", "massachusetts", "misisipi", "madrid", "barcelona", "andalucia", "paisano"
+    diccionario = ["oklahoma", "ontario", "massachusetts", "misisipi", "madrid", "barcelona", "andalucia", "paisano",
                    "paisvasco", "euskalerria", "torremolinos", "honduras", "animado", "roma", "venecia", "cormoran",
                    "luxemburgo", "londres", "mesilla", "comoda", "armario", "escalera", "tejado", "cimientos",
                    "sillones", "frigorifico", "batidora", "cazuela", "sartenes", "espumadera", "pinzas", "harina",
