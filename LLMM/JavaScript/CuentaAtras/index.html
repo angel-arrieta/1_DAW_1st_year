@@ -1,0 +1,74 @@
+<!doctype html5>
+<html>
+<head>
+	<meta enctype="utf-8">
+	<title>Cuenta Atras</title>
+	<style>
+		body{
+			display: flex;
+			flex-direction: row;
+		}
+	</style>
+	<script>
+		// Una variable es un espacio para almacenar datos (por ahora simples).
+		var n = 0;//1ª decima
+		var m = 0;//2ª decima
+		var l = 0;//unidades
+		var k = 0;//decenas
+		var j = 1;//minutos
+		// Funcion que se ejecuta al abrir la pagina y que define lo se hace cada segundo
+		function cuentaAtras() {
+			// Con setInterval definimos acciones que se realizan cada cierto tiempo.
+			// El tiempo se expresa en milesimas de segundo.
+			// En este caso se ejecuta marchaAtras cada segundo = 1000 milisegundos.
+			setInterval(marchaAtras, 1);
+		}
+
+		// 
+		function marchaAtras() {
+			// Esta instruccion ejecuta codigo condicional.
+			// La parte del 'if' si se cumple la condicion y 
+			// la del 'else' si no se cumple.
+			if(n>0) {n -= 1}
+			else { if(m>0) {m -= 1}
+					else { if(l>0) {l -= 1}
+							else { if(k>0) {k -= 1}
+									else { if(j>0) {j -= 1}
+											else {j = 1}
+											k = 5}
+									l = 9}
+							m = 9}
+					n = 9}
+			// Cambiamos parte de la pagina usando DOM
+			document.getElementById("min").src = j + ".png";
+
+			document.getElementById("segu2").src = k + ".png";
+			document.getElementById("segu").src = l + ".png";
+
+			
+			document.getElementById("decima2").src = m + ".png";
+			document.getElementById("decima").src = n + ".png";
+			
+		}
+	</script>
+</head>
+<body onload="cuentaAtras()">
+	<div id="numeros">
+		<img src="9.png" id="min">
+	</div>
+
+	<div> <img src="2puntos.png"> </div>
+
+	<div id="numeros">
+		<img src="9.png" id="segu2">
+		<img src="9.png" id="segu">
+	</div>
+
+	<div> <img src="punto.png" id="punto"> </div>
+
+	<div id="numeros">
+		<img src="9.png" id="decima2">
+		<img src="9.png" id="decima">
+	</div>
+</body>
+</html>

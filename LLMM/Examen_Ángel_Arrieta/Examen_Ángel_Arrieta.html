@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Examen CSS3</title>
+    <style>
+    body{
+        background-image: linear-gradient(steelblue, lightskyblue);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .cabecera{ display: flex; flex-direction: row; justify-content: stretch; }
+    .cabitem{ display: flex; flex-direction: row; justify-content: center;}
+    .ia { width:70%; z-index: 1; } .ib { width:30%; z-index: 1; } 
+    h1{ font-size: 45px; font-weight: bolder; color: white; }
+    .logo{ border: solid white 2px; padding: 5px; height: 60px; }
+
+    .middle{ display: flex; flex-direction: row; justify-content: space-between;}
+    .lat { display: flex; flex-direction: column; justify-content: space-evenly; }
+    .sub{ color:white; text-indent: 3%; }
+    .latcabez { background-color: grey; color:white; font: bold}
+    .latmenu {
+               display: flex; flex-direction: column;
+               background-color: grey; color:white;
+               border: solid white 1px; border-radius: 4px;
+            }
+    a { text-decoration-line: none; color: white; }
+    
+    </style>
+</head>
+<body>
+    <div class="cabecera">
+        <div class="cabitem ia"> <h1>EXAMEN LLMM 2022</h1> </div>
+        <div class="cabitem ib"> <img src="images/logo-iesra-cadiz-color-primario.png" alt="logo" class="logo"> </div>
+    </div>
+    <div class="sub"> Diciembre 12, 2022 </div>
+    <div class="middle">
+
+        <div class="lat"> 
+            <div class="latcabez"> Enlace a mis ejercicios </div>
+            <div class="latmenu">
+                <div><a href="https://drive.google.com/drive/folders/132K7YkWsY9y9w5VO-JUP_PJlSbr7djKM?usp=sharing"> Mi Drive de Ejercios  </a> </div>
+                <div><a href="examples/TextCol.html"> </a> Texto en columnas </div>
+                <div><a href="examples/Webdefault.html"> </a> Cabezero de Web </div>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+        <div class="center">
+            a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br>
+            a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br>
+        </div>
+        <div class="opuesto">
+            a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br>
+            a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br> a <br>
+        </div>
+
+    </div>
+
+
+</body>

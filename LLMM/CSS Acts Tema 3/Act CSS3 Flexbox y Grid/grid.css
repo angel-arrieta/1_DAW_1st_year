@@ -1,0 +1,36 @@
+body{ padding-left:10px ;padding-right:10px;
+        background-color: grey;
+        font-family: "Lobster";
+}
+.up{ color:#7736C6; }
+h1{ text-align: center;}
+.sub{ text-align: center;
+      border-bottom: 1px solid dimgray;
+      padding-bottom: 9px;
+}
+
+.bod{ padding: 8px; display:grid;
+      grid-template-columns: 9% 1fr;
+      border-bottom: 1px solid dimgray;
+}
+.latmen{ color:#7736C6;
+         display: grid; text-align: left;
+         grid-template-columns:1;
+         grid-template-rows: repeat(5, 50px);
+}
+
+.center{ display: grid; grid-template-rows: 2fr 1fr; 
+         gap: 10px;}
+.cup{ display: grid; gap: 5%;
+        grid-template-columns: 2fr 1fr;
+}
+.cdown{ display: grid; gap: 5%;
+        grid-template-columns: 1fr 1fr 1fr;
+}
+.planet { height: 150px; border-radius: 11px; }
+.container{ border: solid lightgray 1px;
+            border-radius: 11px; text-align: center;
+            color:#7736C6; padding: 10px;
+}
+.earth { height: 250px; border-radius: 11px; }
+.mars { height: 200px; border-radius: 11px; }

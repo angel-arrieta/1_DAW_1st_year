@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Formulario
+    </title>
+    <script type="text/javascript" src="Scripts/act4.js"></script>
+    <style>
+        .all{display: flex;
+             flex-direction: column;
+             align-items: stretch
+        }
+        div{ margin: 2px;
+             padding: 2px
+        }
+        .boton{ display: inline-block;
+                margin: 10px;
+                padding: 3px;
+                border: solid 1px grey
+        }
+        .co{ color: red }
+        .co > .good{ color: green }
+    </style>
+</head>
+<body>
+    <div class="all">
+            <div> Campo1: <input type="text" name="escrito" id="escribir">
+                <div class="co" id="textcomp"> </div> </div>
+
+            <div> Campo2 (número): <input type="number" name="calculado" id="numero">
+                <div class="co" id="numcomp"> </div> </div>
+
+            <div> Código postal (Provincia de Cádiz): <input type="number" name="ubicacion" id="cod_pos">
+                <div class="co" id="ubicomp"> </div> </div>
+
+            <div> DNI: <input type="text" name="identificacion" id="nif">
+                <div class="co" id="idcomp"> </div> </div>
+
+            <div> Correo electrónico: <input type="text" name="correo" id="mail">
+                <div class="co" id="mailcomp"> </div> </div>
+
+            <div class="boton" type="button" id="submit" onclick="texto(escribir);numeros(numero);codigo(cod_pos);identificar(nif);correo(mail);comprobacion()"> Enviar </div>
+            <div class="co" id="completo"> </div>
+    </div>
+</body>

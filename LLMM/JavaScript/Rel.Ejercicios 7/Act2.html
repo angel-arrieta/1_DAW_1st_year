@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Envios
+    </title>
+    <script type="text/javascript" src="Scripts/act2.js"></script>
+    <style>
+        .all{display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        fieldset{
+            padding: 10px;
+            margin: 5px; 
+            border: solid gray 2px;
+        }
+        fieldset > div{
+            padding: 3px;
+        }
+        .cor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <fieldset class="cliente">
+            <legend>Cliente</legend>
+            <div> Nombre: <input type="text" name="myname" id="nombre" onchange="texto('nomcomp',this)"> 
+                <div class="cor" id="nomcomp"> </div>
+            </div>
+            <div> Apellidos: <input type="text" name="mysurname" id="apellidos" onchange="texto('apellcomp',this)"> 
+                <div class="cor" id="apellcomp"> </div>
+            </div>
+            <div> Fecha nacimiento: <input type="date" max="2023-05-31" name="mybirthdate" id="nacimiento" onchange="nacimiento(this)"> 
+                <div class="cor" id="fnaccomp"> </div>
+            </div>
+        </fieldset>
+        <fieldset class="domicilio">
+            <legend>Domicilio</legend>
+            <div> Calle: <input type="text" name="calle" id="mystreet" onchange="texto('callecomp', this)"> 
+                <div class="cor" id="callecomp"> </div>
+            </div>
+            <div> Número: <input type="number" name="mydirection" id="numero" onchange="numero('numcomp', this)"> 
+                <div class="cor" id="numcomp"> </div>
+            </div>
+            <div> C.P.: <input type="number" name="mypostalcode" id="codpostal" onchange="numero('cpocomp', this)"> 
+                <div class="cor" id="cpocomp"> </div>
+            </div>
+        </fieldset>
+    </div>
+</body>

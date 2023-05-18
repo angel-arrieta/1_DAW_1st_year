@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Blackjack</title>
+    <link href='Blackjack.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="Blackjack.js"></script>
+</head>
+<body onload="inicia()">
+
+<h1>BLACKJACK</h1>
+
+<div id="explica">
+    
+</div>
+
+<div class="middle">
+    <div class="left">
+        <div class="boton" type="button" id="reiniciar" onclick="location.reload();">Reiniciar</div>
+        <div id="terminado"></div>
+        <div> Apostado: <div id="apostado"> </div> </div>
+        <div class="boton" type="button" id="apostar" onclick="mas()"> Apostar<br>Más (+10)</div>
+        <div> Dinero: <div id="dinero"> </div> </div>
+    </div>
+    <div class="gamefield">
+        <div id="crupier"></div>
+        Crupier <br>
+        Tu mano
+        <div id="jugador"></div>
+        <div id="doblado">
+            <!--Segunda mano <div id="segundo"></div>-->
+        </div>
+    </div>
+</div>
+<div class="down">
+    <div class="boton" type="button" id="pedir" onclick="pedir()">Pedir Carta</div>
+    <div class="boton" type="button" id="plantarse" onclick="plantarse()">Plantarse</div>
+    <div class="boton" type="button" id="rendirse" onclick="rendirse()">Rendirse</div>
+<div id="extra">
+    <!--<div class="boton" type="button" id="pedir2" onclick="pedir2()">Pedir Carta2</div>-->
+    <div class="boton" type="button" id="doblar" onclick="doblar()">Doblar<br>Apuesta</div>
+    <div class="boton" type="button" id="seguro" onclick="seguro()">Asegurar</div>
+    <div class="boton" type="button" id="dividir" onclick="dividir()">Dividir<br>(Incompleto,<br>no jugable)</div>
+</div>
+</div>
+<div id="explica_botones">
+    Si te rindes, solo pierdes la mitad de lo apostado. Puedes doblar tu apesta: Si tus 2 primeras cartas suman 9, 10 u 11, <br>
+    al hacerlo, se te reparte una carta más. Puedes asegurar tu apuesta, aumentando lo apostado un 50%: Cuando el crupier solo tiene 2 cartas <br>
+    y su 1ª carta es As, al hacerlo, si con la otra carta hace Blackjack, ganas la apuesta, si no, pierdes.<br>
+    Puedes dividir si tienes 2 cartas iguales, al hacerlo, juegas 2 manos diferentes, 
+</div>
+</body>

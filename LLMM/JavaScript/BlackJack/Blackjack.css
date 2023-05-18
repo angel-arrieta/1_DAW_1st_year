@@ -1,0 +1,47 @@
+*{
+    margin: 3px;
+    padding: 3px;
+    border: solid;
+    text-align: center;
+    font-size: 19px;
+}
+body{
+    border-color: gold;
+}
+h1{
+    font-size: 40px;
+    border-color: red;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    border-color: green;
+}
+.left{
+    max-width: 10%;
+}
+.gamefield{
+    width: 92%;
+}
+.down{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-color: blue;
+}
+#extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-color: blue;
+}
+.cartas{
+    width: 100px;
+}
+.boton{
+    vertical-align: middle;
+    margin: 3px;
+    padding: 4px;
+}

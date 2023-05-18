@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Suscripción
+    </title>
+    <script type="text/javascript" src="Scripts/act3B.js"></script>
+    <style>
+        .all{display: flex;
+             flex-direction: column;
+             align-items: stretch
+        }
+        div{ margin: 2px;
+             padding: 2px
+        }
+        .boton{ display: inline-block;
+                margin: 10px;
+                padding: 3px;
+                border: solid 1px grey
+        }
+        .co{ color: red }
+        .co > .good{ color: green }
+    </style>
+</head>
+<body>
+    <div class="all">
+            <div> Nombre: <input type="text" name="myname" id="nombre">
+                <div class="co" id="nomcomp"> </div> </div>
+            <div> Edad: <input type="number" name="myage" id="edad" min="0">
+                <div class="co" id="edadcomp"> </div> </div>
+            <div> Correo electrónico: <input type="text" name="myemail" id="mail">
+                <div class="co" id="mailcomp"> </div> </div>
+            <div> Fecha: <input type="date" name="date" id="fecha">
+                <div class="co" id="fechacomp"> </div> </div>
+            <div> Preferencia (obligatoria): <select name="interest" id="prefer">
+                                <option value="ninguno" selected> No escogida </option>
+                                <option value="opcion1"> Opcion 1 </option>
+                                <option value="opcion2"> Opcion 2 </option>
+                                <option value="opcion3"> Opcion 3 </option>
+                            </select>
+                <div class="co" id="prefercomp"> </div> </div>
+            </div>
+            <div>Opcional: <label><input type="checkbox" id="check" value="cuadro"> Hazme Click</label>
+            <fieldset>
+                Escoge: <br>
+                <div>
+                    <label><input type="radio" id="uno" name="opciones" value="1">Opción uno</label> <br>
+                    <label><input type="radio" id="dos" name="opciones" value="2">Opción dos</label> <br>
+                    <label><input type="radio" id="tres" name="opciones" value="3">Opción tres</label> <br>
+                    <div class="co" id="radiocomp"> </div>
+                </div>
+            </fieldset>                                                                                 
+            <div class="boton" type="button" id="submit" onclick="texto(nombre);numeros(edad);correo(mail);fechado(fecha);opciones(prefer);radio();comprobacion()"> Submit </div>
+            <div class="co" id="completo"> </div>
+    </div>
+</body>

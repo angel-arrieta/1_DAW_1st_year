@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Interes
+    </title>
+    <script type="text/javascript" src="Scripts/act3A.js"></script>
+    <style>
+        .all{display: flex;
+             flex-direction: column;
+             align-items: stretch
+        }
+        div{ margin: 2px;
+             padding: 2px
+        }
+        .boton{ display: inline;
+                margin: 10px;
+                padding: 3px;
+                border: solid 1px grey
+        }
+        .co{ color: red }
+        .co > .good{ color: green }
+    </style>
+</head>
+<body>
+    <div class="all">
+            <div> Nombre: <input type="text" name="myname" id="nombre">
+                <div class="co" id="nomcomp"> </div> </div>
+            <div> Edad: <input type="number" name="myage" id="edad">
+                <div class="co" id="edadcomp"> </div> </div>
+            <div> Interés: <select name="interest" id="interes">
+                                <option value="ninguno" selected> Elegir </option>
+                                <option value="depor"> Deportes </option>
+                                <option value="series"> Series </option>
+                                <option value="tecno"> Tecnologias </option>
+                                <option value="natur"> Naturaleza </option>
+                                <option value="musica"> Música </option>
+                                <option value="artes"> Artes </option>
+                            </select>
+                <div class="co" id="intcomp"> </div> </div>
+            </div>
+            <div class="boton" type="button" id="enviar" onclick="texto(nombre);numero(edad);opciones(interes);completo(nombre,edad,interes)"> Enviar </div>
+            <div class="co" id="completo"> </div> </div>
+    </div>
+</body>
