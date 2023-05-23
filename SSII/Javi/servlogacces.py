@@ -21,7 +21,4 @@ if __name__ == "__main__":
             index_file.write("</html>\n")
 
         print("Se ha creado el archivo index.html con las últimas líneas del log.")
-        time.sleep(3)
-
-    sftp.close()
-    ssh.close()
+        time.sleep(10)
