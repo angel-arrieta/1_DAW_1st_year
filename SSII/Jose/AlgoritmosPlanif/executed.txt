@@ -1,0 +1,6 @@
+Proceso A: entra en el ciclo 1 y sale en el ciclo 6
+Proceso D: entra en el ciclo 7 y sale en el ciclo 12
+Proceso B: entra en el ciclo 13 y sale en el ciclo 18
+Proceso C: entra en el ciclo 19 y sale en el ciclo 22
+Proceso A2: entra en el ciclo 23 y sale en el ciclo 28
+Proceso D2: entra en el ciclo 29 y sale en el ciclo 32
