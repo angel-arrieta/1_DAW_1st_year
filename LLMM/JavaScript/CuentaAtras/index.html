@@ -4,71 +4,117 @@
 	<meta enctype="utf-8">
 	<title>Cuenta Atras</title>
 	<style>
-		body{
+		.contador, .botones{
 			display: flex;
 			flex-direction: row;
 		}
+		body{
+			display: flex;
+			flex-direction: column;
+		}
 	</style>
 	<script>
-		// Una variable es un espacio para almacenar datos (por ahora simples).
-		var n = 0;//1ª decima
-		var m = 0;//2ª decima
-		var l = 0;//unidades
-		var k = 0;//decenas
-		var j = 1;//minutos
-		// Funcion que se ejecuta al abrir la pagina y que define lo se hace cada segundo
+		var centes = 0;//(.0[0]) centesima
+		var decis = 0;//(.[0]0) decima
+		var segu = 9;//unidades seg
+		var decsegu = 3;//decenas seg
+		var minu = 6;//unidades min
+		var decminu = 1;//decenas minutos
+		var horas = 0;//unidades horas
+		var dechoras = 0;//decenas horas
+		equilibrio = 1;
+		the_last = false;
 		function cuentaAtras() {
-			// Con setInterval definimos acciones que se realizan cada cierto tiempo.
-			// El tiempo se expresa en milesimas de segundo.
-			// En este caso se ejecuta marchaAtras cada segundo = 1000 milisegundos.
-			setInterval(marchaAtras, 1);
-		}
-
-		// 
+			cambia = setInterval(marchaAtras, 10) }
 		function marchaAtras() {
-			// Esta instruccion ejecuta codigo condicional.
-			// La parte del 'if' si se cumple la condicion y 
-			// la del 'else' si no se cumple.
-			if(n>0) {n -= 1}
-			else { if(m>0) {m -= 1}
-					else { if(l>0) {l -= 1}
-							else { if(k>0) {k -= 1}
-									else { if(j>0) {j -= 1}
-											else {j = 1}
-											k = 5}
-									l = 9}
-							m = 9}
-					n = 9}
-			// Cambiamos parte de la pagina usando DOM
-			document.getElementById("min").src = j + ".png";
-
-			document.getElementById("segu2").src = k + ".png";
-			document.getElementById("segu").src = l + ".png";
-
-			
-			document.getElementById("decima2").src = m + ".png";
-			document.getElementById("decima").src = n + ".png";
-			
+			if(centes>0) {centes -= 1}
+			else { if(decis>0) {decis -= 1}
+			else { if(segu>0) {segu -= 1}
+			else { if(decsegu>0) {decsegu -= 1}
+			else { if(minu>0) {minu -= 1}
+			else { if(decminu>0) {decminu -= 1}
+			else { if(horas>0) {horas -= 1}
+			else { if(dechoras>0) {dechoras -= 1}
+			else { dechoras = 9} horas = 9}
+			decminu = 5} minu = 9} decsegu = 5}
+			segu = 9} decis = 9} centes = 9}
+			document.getElementById("horas2").src = dechoras + ".png";
+			document.getElementById("horas").src = horas + ".png";
+			document.getElementById("min2").src = decminu + ".png";
+			document.getElementById("min").src = minu + ".png";
+			document.getElementById("segu2").src = decsegu + ".png";
+			document.getElementById("segu").src = segu + ".png";
+			document.getElementById("decima2").src = decis + ".png";
+			document.getElementById("decima").src = centes + ".png";
+			if (the_last == true && centes == 0 && decis == 0 && segu == 0 && decsegu == 0 && minu == 0 && decminu == 0 && horas == 0 && dechoras == 0)
+				{ window.close() }
+			else if (the_last == false && centes == 0 && decis == 0 && segu == 0 && decsegu == 0 && minu == 0 && decminu == 0 && horas == 0 && dechoras == 0)
+				{ clearInterval(cambia) } }
+		function parar(){
+			if (equilibrio == 1){
+				clearInterval(cambia)
+				equilibrio = 0
+			} else if (equilibrio == 0){
+				return } }
+		function seguir(){
+			if (equilibrio == 0){
+				cambia = setInterval(marchaAtras, 10)
+				equilibrio = 1
+			} else if (equilibrio == 1){
+				return } }
+		function minuto(){
+			centes = 0; decis = 0; segu = 0;
+			decsegu = 0; minu = 1; decminu = 0;
+			horas = 0; dechoras = 0; the_last = true }
+		function resetear(){
+			clearInterval(cambia)
+			centes = 0;//(.0[0]) centesima
+			decis = 0;//(.[0]0) decima
+			segu = 9;//unidades seg
+			decsegu = 3;//decenas seg
+			minu = 6;//unidades min
+			decminu = 1;//decenas minutos
+			horas = 0;//unidades horas
+			dechoras = 0;//decenas horas
+			equilibrio = 1;
+			the_last = false;
+			cambia = setInterval(marchaAtras, 10)
 		}
 	</script>
 </head>
 <body onload="cuentaAtras()">
-	<div id="numeros">
-		<img src="9.png" id="min">
+	<div class="contador">
+		<div id="horas">
+			<img src="0.png" id="horas2">
+			<img src="0.png" id="horas">
+		</div>
+
+		<div> <img src="2puntos.png"> </div>
+
+		<div id="minutos">
+			<img src="9.png" id="min2">
+			<img src="9.png" id="min">
+		</div>
+
+		<div> <img src="2puntos.png"> </div>
+
+		<div id="segundos">
+			<img src="9.png" id="segu2">
+			<img src="9.png" id="segu">
+		</div>
+
+		<div> <img src="punto.png" id="punto"> </div>
+
+		<div id="milesimas">
+			<img src="9.png" id="decima2">
+			<img src="9.png" id="decima">
+		</div>
 	</div>
-
-	<div> <img src="2puntos.png"> </div>
-
-	<div id="numeros">
-		<img src="9.png" id="segu2">
-		<img src="9.png" id="segu">
-	</div>
-
-	<div> <img src="punto.png" id="punto"> </div>
-
-	<div id="numeros">
-		<img src="9.png" id="decima2">
-		<img src="9.png" id="decima">
+	<div class="botones">
+		<button class="minuto" type="button" onclick="minuto()"> Último minuto </button>
+		<button class="para" type="button" onclick="parar()"> Parar </button>
+		<button class="sigue" type="button" onclick="seguir()"> Continuar </button>
+		<button class="resetear" type="button" onclick="resetear()"> Resetear </button>
 	</div>
 </body>
 </html>
