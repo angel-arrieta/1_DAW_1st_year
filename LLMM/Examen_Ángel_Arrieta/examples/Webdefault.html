@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Web</title>
+	<style type="text/css">
+		* {
+			margin:0px;
+			padding:0px;
+		}
+		#header {
+			margin:auto;
+			width:500px;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		ul, ol {
+			list-style:none;
+		}
+		.top > li {
+			float:left;
+		}
+		.top li a {
+			background-color:#000;
+			color:#fff;
+			text-decoration:none;
+			padding:10px 12px;
+			display:block;
+		}
+		.top li a:hover {
+			background-color:#434343;
+		}			
+		.top li ul {
+			display:none;
+			position:absolute;
+			min-width:140px;
+        }			
+		.top li:hover > ul {
+			display:block;
+		}			
+		.top li ul li {
+			position:relative;
+		}			
+		.top li ul li ul {
+			right:-140px;
+			top:0px;			
+        }
+	</style>
+</head>
+
+<body>
+<div id="header">
+	<ul class="top">
+		<li>
+		<a class="logo" href="Webdefault.html" style="text-align: center">
+            <img src="images\firma.jpg" alt="Ángel Arrieta Soto" height="65px"><br>
+            Home
+        </a></li>
+			<li><a href="">Ratatata</a>
+				<ul>
+				<li><a href="">Ra1</a></li>
+				<li><a href="">Ra2</a></li>
+				
+			</li>
+			</ul>
+			</li>
+			<li><a href="">Lerelerele</a>
+				<ul>
+					<li><a href="">Le1</a></li>
+					<li><a href="">Le2</a></li>
+	
+				</ul>
+			</li>
+			<li><a href="">tirititiri</a>
+			<ul>
+				<li><a href="">Ti1</a></li>
+				<li><a href="">Ti2</a></li>
+			</ul>
+			</li>
+	</ul>
+</div>
+
+</body>
+</html>
