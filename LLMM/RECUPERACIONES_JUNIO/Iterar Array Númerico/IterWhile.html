@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> While Iter </title>
+    <script>
+        function IterWhile(){
+        let numeros = [1,2,3,4,5,6]
+        let mostrar = ""
+        let count = 0
+        while ( count < numeros.length ) {
+            mostrar += ("<br> <div>" + numeros[count] + "</div>")
+            count ++
+        }
+        document.getElementById("bucle").innerHTML = mostrar
+    }
+    </script>
+    <style>
+        h1{ text-align: center; 
+            color:brown;}
+        body{
+            background-color:aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #bucle{
+            color: blueviolet;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Iterar Array con while </h1>
+    <div id="bucle">
+    </div>
+    <script>
+        IterWhile()
+    </script>
+</body>
+</html>

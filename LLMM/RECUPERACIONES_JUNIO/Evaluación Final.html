@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Colores </title>
+    <script type="text/javascript" src="Evaluar.js"></script>
+    <style>
+        h1{ text-align: center; 
+            color:brown;}
+        body{
+            background-color:cornflowerblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #response{
+            color: blueviolet;
+            font-size: 25px;
+        }
+        *{
+            margin: 5px;
+        }
+        table, td{
+            margin: 8px;
+            border: solid goldenrod;
+            text-align: center;
+        }
+        table{
+            background-color: goldenrod;
+        }
+        td{
+            color: aqua;
+            font-size: 20px;
+            background-color: blue;
+        }
+        input{
+            color: brown;
+            font-size: 20px;
+            text-align: center;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evaluación Final</h1>
+    <table id="notas">
+        <tr class="listado">
+            <td>Evaluación</td>
+            <td>FOL</td>
+            <td>SSII</td>
+            <td>EDES</td>
+            <td>PROG</td>
+            <td>LLMM</td>
+            <td>BBDD</td>
+        </tr>
+        <tr class="primera">
+            <td>1ª</td>
+            <td><input type="number" id="fol1" min="0"></td>
+            <td><input type="number" id="ssii1" min="0"></td>
+            <td><input type="number" id="edes1" min="0"></td>
+            <td><input type="number" id="prog1" min="0"></td>
+            <td><input type="number" id="llmm1" min="0"></td>
+            <td><input type="number" id="bbdd1" min="0"></td>
+        </tr>
+        <tr class="segunda">
+            <td>2ª</td>
+            <td><input type="number" id="fol2" min="0"></td>
+            <td><input type="number" id="ssii2" min="0"></td>
+            <td><input type="number" id="edes2" min="0"></td>
+            <td><input type="number" id="prog2" min="0"></td>
+            <td><input type="number" id="llmm2" min="0"></td>
+            <td><input type="number" id="bbdd2" min="0"></td>
+        </tr>
+        <tr class="tercera">
+            <td>3ª</td>
+            <td><input type="number" id="fol3" min="0"></td>
+            <td><input type="number" id="ssii3" min="0"></td>
+            <td><input type="number" id="edes3" min="0"></td>
+            <td><input type="number" id="prog3" min="0"></td>
+            <td><input type="number" id="llmm3" min="0"></td>
+            <td><input type="number" id="bbdd3" min="0"></td>
+        </tr>
+        <tr class="final">
+            <td>Media</td>
+            <td id="Fol"> </td>
+            <td id="Ssii"> </td>
+            <td id="Edes"> </td>
+            <td id="Prog"> </td>
+            <td id="Llmm"> </td>
+            <td id="Bbdd"> </td>
+        </tr>
+    </table>
+    <button onclick="evaluar()"> Evaluar </button>
+    <div id="response">
+    </div>
+</body>
+</html>

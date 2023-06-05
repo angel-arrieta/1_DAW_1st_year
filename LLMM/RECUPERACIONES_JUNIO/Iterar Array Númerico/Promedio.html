@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Promedio </title>
+    <script>
+    function Promedio(){
+        let numeros = [1,2,3,4,5,6]
+        var suma = 0
+        numeros.forEach(num => suma += num)
+        promedio = suma / numeros.length
+        document.getElementById("media").innerHTML = promedio}
+  </script>
+  <style>
+    h1{ text-align: center; 
+        color:brown;}
+    body{
+        background-color:aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #media{
+        color: blueviolet;
+        font-size: 25px;
+    }
+</style>
+</head>
+<body>
+    <h1> Promedio del Array</h1>
+    <div id="media">
+    </div>
+    <script>
+        Promedio()
+    </script>
+</body>
+</html>

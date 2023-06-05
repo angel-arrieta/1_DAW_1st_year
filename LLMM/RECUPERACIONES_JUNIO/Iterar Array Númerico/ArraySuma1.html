@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Array Sumado 1 </title>
+    <script>
+    function ArraySuma(){
+        let numeros = [1,2,3,4,5,6]
+        var copia = []
+        numeros.forEach(num => copia.push(num+1))
+        document.getElementById("lista").innerHTML = copia}
+  </script>
+  <style>
+    h1{ text-align: center; 
+        color:brown;}
+    body{
+        background-color:aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #lista{
+        color: blueviolet;
+        font-size: 25px;
+    }
+</style>
+</head>
+<body>
+    <h1> Copiar Array sumando 1 a cada elemento</h1>
+    <div id="lista">
+    </div>
+    <script>
+        ArraySuma()
+    </script>
+</body>
+</html>

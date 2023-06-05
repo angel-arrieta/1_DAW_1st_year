@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> For Iter </title>
+    <script>
+    function IterFor(){
+        let numeros = [1,2,3,4,5,6]
+        var mostrar = ""
+        for (nu in numeros) {
+            mostrar += ("<br> <div>" + numeros[nu] + "</div>")
+        }
+        document.getElementById("bucle").innerHTML = mostrar}
+    </script>
+    <style>
+        h1{ text-align: center; 
+            color:brown;}
+        body{
+            background-color:aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #bucle{
+            color: blueviolet;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Iterar Array con for </h1>
+    <div id="bucle">
+    </div>
+    <script>
+        IterFor()
+    </script>
+</body>
+</html>

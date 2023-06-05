@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> X Random Numbers </title>
+    <script type="text/javascript" src="Script.js"></script>
+  <style>
+    h1{ text-align: center; 
+        color:brown;}
+    body{
+        background-color:aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #response{
+        color: blueviolet;
+        font-size: 25px;
+    }
+    *{
+        margin: 5px;
+    }
+</style>
+</head>
+<body>
+    <h1>v X Números Aleatorios v</h1>
+    <input type="number" id="cantidad" min="0">
+    <button onclick="randomNumbers(cantidad)">Sacar</button>
+    <div id="response">
+    </div>
+</body>
+</html>

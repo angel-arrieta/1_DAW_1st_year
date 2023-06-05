@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Colores </title>
+    <script>
+        function colores(color_usuario){
+            let colores = ["azul", "amarillo", "rojo", "verde", "café", "rosa"]
+            var esta = colores.includes(color_usuario.value.toLocaleLowerCase())
+            if (esta == true){
+                respuesta = "¡El color " + color_usuario.value.toLocaleLowerCase() + " está en el array!"
+            } else if(esta == false){
+                respuesta = color_usuario.value.toLocaleLowerCase() + " no está en el array."
+            }
+            document.getElementById("response").innerHTML = respuesta
+        }
+    </script>
+    <style>
+        h1{ text-align: center; 
+            color:brown;}
+        body{
+            background-color:aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #response{
+            color: blueviolet;
+            font-size: 25px;
+        }
+        *{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Tenemos tu color?</h1>
+    <input type="text" id="user_color">
+    <button onclick="colores(user_color)">Mirar</button>
+    <div id="response">
+    </div>
+</body>
+</html>
