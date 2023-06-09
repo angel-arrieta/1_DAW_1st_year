@@ -5,7 +5,7 @@ Documentación:
 """
 
 if __name__ == "__main__":
-    ## VARIABLES NECESARIAS ##
+    #  VARIABLES NECESARIAS
     secreta = dame()
     adivinar = []
     no_esta = []
@@ -13,9 +13,9 @@ if __name__ == "__main__":
     intentos = 5
     for i in range(len(secreta)):
         adivinar.append("_")
-    ##vv PROCESO DE JUEGO vv##
+    # vv PROCESO DE JUEGO vv
     while True:
-        ## PRINT INTERFAZ ##
+        # PRINT INTERFAZ
         print(f"TESTING PURPOSE: '{secreta}'")  # TESTEO
         print(muneco(intentos))
         print(f"\tLongitud: {len(secreta)}")
@@ -25,7 +25,7 @@ if __name__ == "__main__":
               f"\t{'  '.join(no_esta)}")
         intento = input("Introduzca una letra (ó 0 para intentar la palabra)\n> ")
         lugares = []
-        ##vv CONTROL DE ERRORES AL INPUT PRINCIPAL vv##
+        # vv CONTROL DE ERRORES AL INPUT PRINCIPAL vv
         if revisor(ya_probado, intento) is True:
             print("Ya introduciste anteriormente esa letra")
             continue
@@ -40,8 +40,8 @@ if __name__ == "__main__":
                 continue
         except ValueError:  # Es una letra o 0
             pass
-        ##^^ CONTROL DE ERRORES AL INPUT PRINCIPAL ^^##
-        ##vv SUB-INPUT /PALABRAS/ vv##
+        # ^^ CONTROL DE ERRORES AL INPUT PRINCIPAL ^^
+        # vv SUB-INPUT /PALABRAS/ vv
         if intento == "0":
             compara = str(input("Intente adivinar la palabra (0 para salir)\n> "))
             if compara == "0":
@@ -63,8 +63,8 @@ if __name__ == "__main__":
             if non == 1:
                 print("Introduzca letras, no números (saliendo...)")
                 continue
-            ##^^ SUB-INPUT /PALABRAS/ ^^##
-            ##vv COMPARADOR DE PALABRAS vv##
+            # ^^ SUB-INPUT /PALABRAS/ ^^
+            # vv COMPARADOR DE PALABRAS vv
             ya_probado.append(compara)
             if compara != secreta:
                 no_esta.append(compara)
@@ -74,8 +74,8 @@ if __name__ == "__main__":
                 for letra in compara:
                     adivinar.append(letra)
                 break
-            ##^^ COMPARADOR DE PALABRAS ^^##
-        ##vv BUSCADOR DE LETRAS vv##
+            # ^^ COMPARADOR DE PALABRAS ^^##
+        # vv BUSCADOR DE LETRAS vv
         elif intento != "0":
             ya_probado.append(intento)
             veces = secreta.count(intento)
@@ -92,12 +92,12 @@ if __name__ == "__main__":
                     x += 1
                 for positions in lugares:
                     adivinar[positions] = intento
-        ##^^ BUSCADOR DE LETRAS ^^##
-        ## PASO AL DESENLACE ##
+        # ^^ BUSCADOR DE LETRAS ^^
+        #  PASO AL DESENLACE
         if intentos == 0 or adivinar.count("_") == 0:
             break
-    ##^^ PROCESO DE JUEGO ^^##
-    ## PRINTS DESENLACE JUEGO ##
+    # ^^ PROCESO DE JUEGO ^^
+    # PRINTS DESENLACE JUEGO
     if "".join(adivinar) == secreta:
         intentos = "win"
         print(muneco(intentos))
