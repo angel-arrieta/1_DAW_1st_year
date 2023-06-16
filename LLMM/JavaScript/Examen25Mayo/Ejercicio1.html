@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title> Ejercicio 1 </title>
+    <script type="text/javascript" src="Script1.js"></script>
+    <link href='Estilo1.css' rel='stylesheet' type='text/css'> 
+</head>
+
+<body onload="PaTras()">
+    <h1> Funciones De Cadenas </h1>
+    <div class="reloj">
+        <div id="minuto">
+            <img src="Contador/2.png" id="min">
+        </div>
+        <div> <img src="Contador/2puntos.png"> </div>
+        <div id="segundos">
+            <img src="Contador/0.png" id="segu2">
+            <img src="Contador/0.png" id="segu">
+        </div>
+    </div>
+    <div class="principal">
+        <div class="inputs">
+            <div> texto 1 <input type="text" name="escrito" id="text1"></div>
+            <div> texto 2 <input type="text" name="escrito" id="text2"></div>
+        </div>
+        <div class="operacion">
+            <div> Operación: <select name="operacion" id="evento" onchange="Cual_Calculo(this)">
+                <option value=undefined selected> </option>
+                <option value="long"> longitud </option>
+                <option value="mayumin"> Mayúscula/Minúscula </option>
+                <option value="numdni"> Núm del DNI </option>
+                <option value="letdni"> Calcula letra DNI</option>
+            </select>
+            </div>
+            <div class="borrar" type="button" id="borrar"> borrar </div>
+        </div>
+        <div class="botones">
+            <div class="borrar" type="button" id="calcular" onclick="Calcular()"> Calcular </div>
+            <div class="borrar" type="button" id="memoria"> Memoria </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title> Ejercicio 2 </title>
+    <script type="text/javascript" src="Script2.js"></script>
+    <link href='Estilo2.css' rel='stylesheet' type='text/css'> 
+</head>
+
+<body onload="PaTras()">
+    <h1> EJERCICIO 2 DNI EN ARRAY JAVASCRIPT </h1>
+    <div class="reloj">
+        <div id="minuto">
+            <img src="Contador/2.png" id="min">
+        </div>
+        <div> <img src="Contador/2puntos.png"> </div>
+        <div id="segundos">
+            <img src="Contador/0.png" id="segu2">
+            <img src="Contador/0.png" id="segu">
+        </div>
+    </div>
+    <div class="principal">
+        <div> Nombre: <input type="text" name="escrito" id="escribir" onchange="texto(this)">
+            <div class="co" id="textcomp"> </div> </div>
+        <div> DNI: <input type="text" name="identificacion" id="nif" onchange="identificar(this)">
+            <div class="co" id="idcomp"> </div> </div>
+        <div> Correo: <input type="text" name="correo" id="mail" onchange="correo(this)">
+            <div class="co" id="mailcomp"> </div> </div>
+        <div class="botones">
+            <div class="boton" type="button" id="submit" onclick="comprobar2()"> Añadir </div>
+            <div class="boton" type="button" id="submit" onclick="borra2()"> Borrar Array </div>
+            <div class="boton" type="button" id="submit" onclick="listar2(escribir, nif, mail)"> Listar Array </div>
+        </div>
+        <div class="co" id="finalcomp"> </div>
+    </div>
+    <table id="resultados">
+        <tr class="primerafila">
+        <td>Nombre</td>
+        <td>DNI</td>
+        <td>Email</td>
+        </tr>
+    </table>
+</body>

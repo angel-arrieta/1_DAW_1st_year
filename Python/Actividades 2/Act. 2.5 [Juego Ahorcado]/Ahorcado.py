@@ -1,8 +1,5 @@
 from guardado import dame, revisor, muneco
-"""
-Documentación:
 
-"""
 
 if __name__ == "__main__":
     #  VARIABLES NECESARIAS

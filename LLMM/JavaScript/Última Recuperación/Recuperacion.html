@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title> Agenda </title>
+    <script type="text/javascript" src="Logica.js"></script>
+    <link href='Estilo.css' rel='stylesheet' type='text/css'> 
+</head>
+<body>
+    <div class="arriba">
+        <img id="imag3" src="logo-iesra-cadiz-color-primario.png"> <h1> AGENDA </h1> <img id="imag3" src="logo-iesra-cadiz-color-primario.png">
+    </div>
+    <div class="principal">
+        <div class="mitad_estetica">
+            <div> Nombre: <input type="text" name="nombre" id="fname" onchange="nombrar(this)">
+                <div class="co" id="nomcomp"> </div> </div>
+            <div> Apellido: <input type="text" name="apellido" id="lname" onchange="apellidar(this)">
+                <div class="co" id="apecomp"> </div> </div>
+        </div>
+        <div class="mitad_estetica">
+            <div> Teléfono: <input type="number" name="telefono" id="phone" onchange="telefono(this)">
+                <div class="co" id="telfcomp"> </div> </div>
+            <div> Correo: <input type="text" name="correo" id="mail" onchange="correo(this)">
+                <div class="co" id="mailcomp"> </div> </div>
+            </div>
+    </div>
+    <div class="botones">
+        <div class="boton" type="button" id="submit" onclick="comprobar();anadir(fname, lname, phone, mail)"> Comprobar </div>
+        <div class="boton" type="button" id="submit" onclick="listar()"> Listado </div>
+        <div class="boton" type="button" id="submit" onclick="Limp_Pant()"> Limpiar Pantalla </div>
+        <div class="boton" type="button" id="submit" onclick="location.reload()"> Borrar Contactos</div>
+    </div>
+    <div class="resultados">
+        <div id="finalcomp"> </div>
+        <h2> Contactos </h2>
+        <div id="resultados">
+            <table id="agenda">
+                <tr class="primerafila">
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Número</td>
+                <td>Email</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
